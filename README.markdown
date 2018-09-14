@@ -27,7 +27,7 @@ The proposal is quite straightforward: extend Subresource Integrity to (at least
 
 For `<a>` elements, the solution could be restricted to elements with the "download" attribute. 
 
-This solution has been discussed (for downloads, i.e., `<a>` elements) in [Issue 68 (WebAppSec -- Subresource Integrity)][SRI68], [Link Hashes][LinkHashes], and [Link Fingerprints][LinkFingerprints]. However, it might be too restrictive, as the "download" attribute works only for [same-origin URLs][download-same-origin].
+This solution has been discussed (for downloads, i.e., `<a>` elements) in [Issue 68 (WebAppSec -- Subresource Integrity)][SRI68], [Link Hashes][LinkHashes], and [Link Fingerprints][LinkFingerprints]. However, it might be too restrictive, as the "download" attribute works only for [same-origin URLs][download-same-origin] which are less problematic from a security perspective.
 
 This also raises UI/UX questions: What happens in case of mismatch? The downloaded files could be put in quarantine or a warning could be shown. `<img>` elements could be hidden or replaced with placeholders. Security issues should be taken into account here to make sure that the mechanism used in case of mismatch does not leak information about the validity of the checksum (as discussed in [SRI v1][SRIcross] and in a [thread][SRI68]). 
 
@@ -57,7 +57,7 @@ Some websites include PGP detached signatures instead of checksums so that visit
 [SRI68]: https://github.com/w3c/webappsec-subresource-integrity/issues/68
 [origin-policy]: https://wicg.github.io/origin-policy/
 [CCS]: https://serval.unil.ch/resource/serval:BIB_9BD511E5C0D0.P001/REF
-[LinkHashes]: https://wiki.whatwg.org/wiki/Link_Hashes`
+[LinkHashes]: https://wiki.whatwg.org/wiki/Link_Hashes
 [LinkFingerprints]: http://www.gerv.net/security/link-fingerprints/
 [signature-based-sri]: https://github.com/mikewest/signature-based-sri
 [SRIcross]: https://w3c.github.io/webappsec-subresource-integrity/#cross-origin-data-leakage
