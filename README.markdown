@@ -8,7 +8,7 @@
 	
 	![Screenshot of VLC's download webpage featuring a SHA-1 checksum](vlc.png)
 
-	A [study][CCS] on this topic will be presented at the 2018 ACM Conference on Computer and Communication Security.
+	A [study][CCS] on this topic has been be presented at the 2018 ACM Conference on Computer and Communication Security.
 
 *   Similarly, webmasters want to make sure that the content they _embed_ on their webpages (typically hosted on a CDN or hotlinked) is not modified. More specifically, when they include images or videos on their webpages, they want to make sure that the content seen by their visitors corresponds to what they intended to show when they included the hotlinked resource. For instance, an image could be replaced with an offensive or controversial one.
 
@@ -21,6 +21,7 @@
     > support for all possible subresources, i.e., a, audio, embed, iframe, img, link,
     > object, script, source, track, and video elements.
 
+	A [study][WWW] on this topic has been presented at The Web Conference 2020 (WWW '20).
 
 ## The proposal
 The proposal is quite straightforward: extend Subresource Integrity to (at least) `<a>` and `<img>` elements. These elements would include an optional "integrity" attribute containing a checksum against which the downloaded resource would be compared.
@@ -49,7 +50,10 @@ Some websites include PGP detached signatures instead of checksums so that visit
 	
 * **This would prevent features such as progressive loading for images and streaming for videos.**
 
-	Indeed, as the content must be completely downloaded for checking its integrity, images could not be progressively displayed (e.g., using a as-received rendering or interlaced rendering) as done in most Web browsers.
+	Indeed, as the content must be completely downloaded for checking its integrity, images could not be progressively displayed (e.g., using a as-received rendering or interlaced rendering) as done in most browsers.
+
+## Acknowledgements
+This work is part of a research effort on integrity verification for web subresources, a project partially funded by the Hasler Foundation with grant #19024.
 
 [Keydnap]: https://transmissionbt.com/keydnap_qa/
 [SRI]: https://w3c.github.io/webappsec-subresource-integrity/
@@ -61,3 +65,4 @@ Some websites include PGP detached signatures instead of checksums so that visit
 [LinkFingerprints]: http://www.gerv.net/security/link-fingerprints/
 [signature-based-sri]: https://github.com/mikewest/signature-based-sri
 [SRIcross]: https://w3c.github.io/webappsec-subresource-integrity/#cross-origin-data-leakage
+[WWW]: https://serval.unil.ch/resource/serval:BIB_641044F40080.P001/REF
