@@ -49,7 +49,7 @@ Some websites include PGP detached signatures instead of checksums so that visit
 	
 * **This would prevent features such as progressive loading for images and streaming for videos.**
 
-	Indeed, as the content must be completely downloaded for checking its integrity, images could not be progressively displayed (e.g., using a as-received rendering or interlaced rendering) as done in most browsers.
+	Indeed, as the content must be completely downloaded for checking its integrity, images could not be progressively displayed (e.g., using a as-received rendering or interlaced rendering) as done in most Web browsers.
 
 [Keydnap]: https://transmissionbt.com/keydnap_qa/
 [SRI]: https://w3c.github.io/webappsec-subresource-integrity/
